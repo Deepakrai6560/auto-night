@@ -16,7 +16,9 @@ body {
   background: #050505;
 }
 
-/* Main Screen */
+/* =========================
+   MAIN SCREEN
+========================= */
 
 .screen {
   width: 100vw;
@@ -48,7 +50,7 @@ body {
 .brand {
   position: absolute;
 
-  top: 32px;
+  top: 30px;
   left: 42px;
 
   z-index: 20;
@@ -57,10 +59,11 @@ body {
 
   font-family: Arial, Helvetica, sans-serif;
 
-  font-size: 22px;
+  font-size: 32px;
   font-weight: 700;
 
-  letter-spacing: 6px;
+  letter-spacing: 7px;
+  line-height: 1.05;
 
   text-transform: uppercase;
 
@@ -68,15 +71,24 @@ body {
 
   text-shadow:
     0 0 20px rgba(255, 255, 255, 0.15);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .brand span {
   font-weight: 300;
   opacity: 0.55;
+
+  font-size: 24px;
+  letter-spacing: 8px;
+
+  margin-bottom: 2px;
 }
 
 /* =========================
-   AUTO
+   AUTO RICKSHAW
 ========================= */
 
 .auto {
@@ -126,6 +138,7 @@ body {
 
   pointer-events: none;
 }
+
 /* =========================
    MUSIC PLAYER
 ========================= */
@@ -158,7 +171,9 @@ body {
   z-index: 20;
 }
 
-/* Song info */
+/* =========================
+   SONG INFO
+========================= */
 
 .song-info {
   display: flex;
@@ -210,7 +225,9 @@ body {
   font-size: 11px;
 }
 
-/* Progress */
+/* =========================
+   PROGRESS
+========================= */
 
 .progress-container {
   display: flex;
@@ -233,7 +250,9 @@ body {
   accent-color: white;
 }
 
-/* Controls */
+/* =========================
+   CONTROLS
+========================= */
 
 .controls {
   display: flex;
@@ -289,7 +308,9 @@ body {
   transform: scale(1.08);
 }
 
-/* Player Buttons */
+/* =========================
+   PLAYER BUTTONS
+========================= */
 
 .music-player button {
   width: 42px;
@@ -320,7 +341,9 @@ body {
   opacity: 0.8;
 }
 
-/* Play Button */
+/* =========================
+   PLAY BUTTON
+========================= */
 
 .music-player .play {
   width: 54px;
@@ -346,38 +369,8 @@ body {
 }
 
 /* =========================
-   MOBILE
+   YOUTUBE PLAYER
 ========================= */
-
-@media (max-width: 600px) {
-
-  .brand {
-    top: 22px;
-    left: 22px;
-
-    font-size: 17px;
-
-    letter-spacing: 4px;
-  }
-
-  .auto {
-    width: 95vw;
-    max-height: 65vh;
-  }
-
-  .auto-glow {
-    width: 300px;
-    height: 300px;
-  }
-
-  .music-player {
-    bottom: 20px;
-
-    min-width: 175px;
-
-    padding: 8px 12px;
-  }
-}
 
 .youtube-player {
   position: absolute;
@@ -420,7 +413,25 @@ body {
   user-select: none;
 }
 
+/* =========================
+   MOBILE
+========================= */
+
 @media (max-width: 600px) {
+
+  .brand {
+    top: 22px;
+    left: 22px;
+
+    font-size: 25px;
+    letter-spacing: 5px;
+  }
+
+  .brand span {
+    font-size: 19px;
+    letter-spacing: 6px;
+  }
+
   .clock {
     top: 22px;
     right: 22px;
@@ -428,5 +439,23 @@ body {
     font-size: 14px;
 
     letter-spacing: 1px;
+  }
+
+  .auto {
+    width: 95vw;
+    max-height: 65vh;
+  }
+
+  .auto-glow {
+    width: 300px;
+    height: 300px;
+  }
+
+  .music-player {
+    bottom: 20px;
+
+    min-width: 175px;
+
+    padding: 8px 12px;
   }
 }
