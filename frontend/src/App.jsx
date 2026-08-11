@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "./App.css";
 
-const PLAYLIST_ID = "PLfdfb0LKtKKs8IcyIvtsf_FfmJU-1pbI1";
+const PLAYLIST_ID = "PLMRKdK25AuPVjHl9Kdb-gkBy0Cm7Zi2xo";
 
 function App() {
   const playerRef = useRef(null);
