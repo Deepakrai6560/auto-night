@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -188,6 +189,8 @@ body {
   width: 42px;
   height: 42px;
 
+  min-width: 42px;
+
   border-radius: 12px;
 
   display: flex;
@@ -238,10 +241,16 @@ body {
   color: rgba(255, 255, 255, 0.5);
 
   font-size: 10px;
+
+  width: 100%;
 }
 
 .progress {
   flex: 1;
+
+  min-width: 0;
+
+  width: 100%;
 
   height: 3px;
 
@@ -419,43 +428,251 @@ body {
 
 @media (max-width: 600px) {
 
-  .brand {
-    top: 22px;
-    left: 22px;
+  .screen {
+    width: 100%;
+    height: 100dvh;
+    min-height: 100dvh;
+  }
 
-    font-size: 25px;
-    letter-spacing: 5px;
+  /* =========================
+     MOBILE BRAND
+  ========================= */
+
+  .brand {
+    top: 20px;
+    left: 18px;
+
+    font-size: 24px;
+    letter-spacing: 4px;
   }
 
   .brand span {
-    font-size: 19px;
-    letter-spacing: 6px;
+    font-size: 18px;
+    letter-spacing: 5px;
+
+    margin-bottom: 1px;
   }
+
+  /* =========================
+     MOBILE CLOCK
+  ========================= */
 
   .clock {
     top: 22px;
-    right: 22px;
+    right: 18px;
 
-    font-size: 14px;
-
+    font-size: 13px;
     letter-spacing: 1px;
   }
 
+  /* =========================
+     MOBILE AUTO
+  ========================= */
+
   .auto {
-    width: 95vw;
-    max-height: 65vh;
+    width: 94vw;
+    max-width: 500px;
+    max-height: 58vh;
   }
 
   .auto-glow {
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
+
+    filter: blur(80px);
+  }
+
+  /* =========================
+     MOBILE MUSIC PLAYER
+  ========================= */
+
+  .music-player {
+    position: absolute;
+
+    left: 12px;
+    right: 12px;
+    bottom: 14px;
+
+    transform: none;
+
+    width: auto;
+    max-width: none;
+    min-width: 0;
+
+    padding: 12px 14px;
+
+    border-radius: 18px;
+  }
+
+  /* =========================
+     MOBILE SONG INFO
+  ========================= */
+
+  .song-info {
+    gap: 10px;
+
+    margin-bottom: 10px;
+
+    width: 100%;
+  }
+
+  .music-icon {
+    width: 38px;
+    height: 38px;
+
+    min-width: 38px;
+
+    border-radius: 10px;
+
+    font-size: 20px;
+  }
+
+  .song-details {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .song-title {
+    max-width: 100%;
+
+    font-size: 13px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .song-status {
+    font-size: 10px;
+  }
+
+  /* =========================
+     MOBILE PROGRESS
+  ========================= */
+
+  .progress-container {
+    width: 100%;
+
+    gap: 6px;
+
+    font-size: 9px;
+  }
+
+  .progress {
+    min-width: 0;
+
+    width: 100%;
+
+    height: 3px;
+  }
+
+  /* =========================
+     MOBILE CONTROLS
+  ========================= */
+
+  .controls {
+    gap: 16px;
+
+    margin-top: 8px;
+  }
+
+  .music-player button {
+    width: 38px;
+    height: 38px;
+
+    font-size: 16px;
+  }
+
+  .music-player .play {
+    width: 48px;
+    height: 48px;
+
+    font-size: 18px;
+  }
+
+  /* =========================
+     MOBILE YOUTUBE
+  ========================= */
+
+  .youtube-player {
+    width: 1px;
+    height: 1px;
+  }
+}
+
+/* =========================
+   VERY SMALL PHONES
+========================= */
+
+@media (max-width: 380px) {
+
+  .brand {
+    top: 18px;
+    left: 15px;
+
+    font-size: 21px;
+    letter-spacing: 3px;
+  }
+
+  .brand span {
+    font-size: 16px;
+    letter-spacing: 4px;
+  }
+
+  .clock {
+    top: 20px;
+    right: 15px;
+
+    font-size: 12px;
+  }
+
+  .auto {
+    width: 92vw;
+    max-height: 52vh;
   }
 
   .music-player {
-    bottom: 20px;
+    left: 8px;
+    right: 8px;
+    bottom: 10px;
 
-    min-width: 175px;
+    padding: 10px 11px;
 
-    padding: 8px 12px;
+    border-radius: 16px;
+  }
+
+  .music-icon {
+    width: 34px;
+    height: 34px;
+
+    min-width: 34px;
+
+    font-size: 18px;
+  }
+
+  .song-title {
+    font-size: 12px;
+  }
+
+  .song-status {
+    font-size: 9px;
+  }
+
+  .controls {
+    gap: 12px;
+  }
+
+  .music-player button {
+    width: 34px;
+    height: 34px;
+
+    font-size: 15px;
+  }
+
+  .music-player .play {
+    width: 44px;
+    height: 44px;
+
+    font-size: 17px;
   }
 }
